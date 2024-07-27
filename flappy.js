@@ -27,7 +27,7 @@ let bottomPipeImg;
 
 let velocityX = -4; // pipes going left
 let velocityY = 0; // jump speed
-let gravity = 0.25;
+let gravity = 0.2;
 let gameOver = false;
 let score = 0;
 
