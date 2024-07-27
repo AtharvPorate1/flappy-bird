@@ -19,13 +19,13 @@ let bird = {
 let pipeArray = [];
 let pipeWidth = 64;
 let pipeHeight = 512;
-let pipeX = boardWidth;
+let pipeX = boardWidth ;
 let pipeY = 0;
 
 let topPipeImg;
 let bottomPipeImg;
 
-let velocityX = -2; // pipes going left
+let velocityX = -4; // pipes going left
 let velocityY = 0; // jump speed
 let gravity = 0.25;
 let gameOver = false;
@@ -102,11 +102,11 @@ function placePipes() {
         return;
     }
     let randomPipeY = pipeY - pipeHeight / 4 - Math.random() * (pipeHeight / 2);
-    let openingSpace = board.height / 4;
+    let openingSpace = board.height / 3;
 
     let topPipe = {
         img: topPipeImg,
-        x: pipeX,
+        x: pipeX ,
         y: randomPipeY,
         width: pipeWidth,
         height: pipeHeight,
@@ -127,7 +127,7 @@ function placePipes() {
 
 function moveBird() {
     // Jump
-    velocityY = -6;
+    velocityY = -3;
 
     // Game reset
     if (gameOver) {
