@@ -75,7 +75,7 @@ function update() {
         context.drawImage(pipe.img, pipe.x, pipe.y, pipe.width, pipe.height);
 
         if (!pipe.passed && bird.x > pipe.x + pipe.width) {
-            score += 0.5; // two pipes 
+            // score += 0.5; // two pipes 
             pipe.passed = true;
         }
 
@@ -128,6 +128,7 @@ function placePipes() {
 function moveBird() {
     // Jump
     velocityY = -3;
+    score += 1
 
     // Game reset
     if (gameOver) {
